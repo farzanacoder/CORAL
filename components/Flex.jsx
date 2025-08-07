@@ -1,8 +1,10 @@
 import React from 'react'
 
-const Flex = () => {
+const Flex = ({children,className}) => {
   return (
-    <div>Flex</div>
+    <div className={`${className} flex`}>
+      {children}
+    </div>
   )
 }
 

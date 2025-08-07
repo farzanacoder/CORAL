@@ -1,8 +1,8 @@
 import React from 'react'
 
-const List = () => {
+const List = ({txt , className}) => {
   return (
-    <div>List</div>
+    <li className={`${className} text-black font-sans font-normal lg:text-base text-sm list-none`}>{txt}</li>
   )
 }
 

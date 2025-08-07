@@ -1,1 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
+
+@theme {
+    --font-sans: "Open Sans", sans-serif;
+    --font-roboto: "Roboto", sans-serif;
+    --spacing-container: 1100px;
+    --color-color1: #1E2832;
+    --color-color2: #E3E3E3;
+
+
+}

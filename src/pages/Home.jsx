@@ -6,6 +6,7 @@ import Brand from '../layouts/Brand'
 import Item from '../layouts/Item'
 import BrndBaner from '../layouts/BrndBaner'
 import Footer from '../layouts/Footer'
+import NewsPart from '../layouts/NewsPart'
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
     <Brand/>
     <Item/>
     <BrndBaner/>
+    <NewsPart/>
     <Footer/>
     </>
   )

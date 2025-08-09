@@ -25,6 +25,11 @@ const NewsPart = () => {
           <Image src={Inst5} />
         </Flex>
         <Heading className="text-center" txt="Or subscribe to the newsletter" />
+
+          <div className='flex gap-x-10 justify-center'>
+                <input className='w-1/3 border-b border-black py-3 px-3' type="email" placeholder='Email Address...'/> 
+                <input type="submit" className='text-base text-black font-normal font-sans border-b border-black cursor-pointer' value='Submit'/>
+            </div>
       </Container>
     </section>
   );

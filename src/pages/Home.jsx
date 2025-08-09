@@ -7,6 +7,8 @@ import Item from '../layouts/Item'
 import BrndBaner from '../layouts/BrndBaner'
 import Footer from '../layouts/Footer'
 import NewsPart from '../layouts/NewsPart'
+import BestSeler from '../layouts/BestSeler'
+import Products from '../layouts/Products'
 
 const Home = () => {
   return (
@@ -16,7 +18,9 @@ const Home = () => {
     <Banner/>
     <Brand/>
     <Item/>
+    <Products/>
     <BrndBaner/>
+    <BestSeler/>
     <NewsPart/>
     <Footer/>
     </>

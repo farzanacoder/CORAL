@@ -17,17 +17,17 @@ const NewsPart = () => {
           className="text-center"
           txt="Follow products and discounts on Instagram"
         />
-        <Flex className="justify-between py-20">
+        <Flex className="lg:justify-between justify-center lg:gap-0 gap-y-5 flex-wrap py-20">
           <Image src={Inst1} />
           <Image src={Inst2} />
           <Image src={Inst3} />
           <Image src={Inst4} />
           <Image src={Inst5} />
-        </Flex>
+         </Flex>
         <Heading className="text-center" txt="Or subscribe to the newsletter" />
 
           <div className='flex gap-x-10 justify-center'>
-                <input className='w-1/3 border-b border-black py-3 px-3' type="email" placeholder='Email Address...'/> 
+                <input className='w-1/3 border-b border-color5 py-3 px-3' type="email" placeholder='Email Address...'/> 
                 <input type="submit" className='text-base text-black font-normal font-sans border-b border-black cursor-pointer' value='Submit'/>
             </div>
       </Container>

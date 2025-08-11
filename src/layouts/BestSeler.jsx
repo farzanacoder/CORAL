@@ -9,9 +9,9 @@ import Card from '../../components/Card'
 
 const BestSeler = () => {
     return (
-        <section className='py-10 lg:py-20'>
+        <section className='py-10 lg:py-15'>
             <Container>
-                <Heading className='text-center pb-9 text-black' text='Best sellers' />
+                <Heading className='text-center pb-9 text-black' txt='Best sellers' />
                 <Flex className='justify-between flex-col lg:flex-row gap-y-4 md:gap-y-0 pb-10'>
                     <div className='flex gap-x-10'>
                         <p className='text-color1 hover:text-color1 duration-500 cursor-pointer text-xs md:text-sm lg:text-base font-sans font-semibold'>All products</p>

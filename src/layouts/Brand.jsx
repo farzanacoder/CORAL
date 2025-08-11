@@ -10,17 +10,35 @@ import Brand_5 from '../../src/assets/04.png'
 
 const Brand = () => {
   return (
+    <>
     <section className='py-20'>
-        <Container>
-            <Flex className='justify-between'>
-                <Image src={Brand_1}/>
-                <Image src={Brand_2}/>
-                <Image src={Brand_3}/>
-                <Image src={Brand_4}/>
-                <Image src={Brand_5}/>
-            </Flex>
-        </Container>
+           <div className="relative w-full overflow-hidden">
+                        <div className="flex animate-marquee whitespace-nowrap">
+                            {[Brand_1, Brand_2, Brand_3, Brand_4, Brand_5, Brand_1, Brand_2, Brand_3, Brand_4, Brand_5].map((brand, i) => (
+                                <Image
+                                    key={i}
+                                    src={brand}
+                                    alt="brand"
+                                    className="h-[50px] lg:h-[65px] w-auto mx-4 inline-block"
+                                />
+                            ))}
+                        </div>
+                    </div>
     </section>
+
+
+
+      {/* CSS Animation */}
+      <style jsx>{`
+        @keyframes marquee {
+          0% { transform: translateX(-50%); }
+          100% { transform: translateX(0%); }
+        }
+        .animate-marquee {
+          animation: marquee 12s linear infinite;
+        }
+      `}</style>
+    </>
 
     
   )

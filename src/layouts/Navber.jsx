@@ -4,8 +4,16 @@ import { FaChevronDown, FaChevronUp } from 'react-icons/fa'
 import Container from '../../components/Container'
 import Flex from '../../components/Flex'
 import List from '../../components/List'
+import { useDispatch } from 'react-redux'
+import { Link } from 'react-router-dom'
+import { breadButton } from '../slices/breadCrumb'
 
 const Navber = () => {
+    let dispatch = useDispatch()
+     let handleItem=(item)=>{
+        dispatch(breadButton(item))
+    }
+
     let [show, setShow] = useState(false)
     let handleClick = () => {
         setShow(!show)
@@ -17,13 +25,13 @@ const Navber = () => {
             <nav className='py-10 px-4 hidden lg:block'>
                 <Container>
                     <Flex className='justify-between items-center'>
-                        <List txt='Jewelry & Accessories' />
-                        <List txt='Clothing & Shoes' />
-                        <List txt='Home & Living' />
-                        <List txt='Wedding & Party' />
-                        <List txt='Toys & Entertainment' />
-                        <List txt='Art & Collectibles' />
-                        <List txt='Craft Supplies & Tools' />
+                         <Link onClick={()=>handleItem('jewelryaccessories')} to='/jewelryaccessories'><List txt='Jewelry & Accessories' /></Link>
+                         <Link onClick={()=>handleItem('clothingshoes')} to='/clothingshoes'><List txt='Clothing & Shoes' /></Link>
+                         <Link onClick={()=>handleItem('homeliving')} to='/homeliving'><List txt='Home & Living' /></Link>
+                         <Link onClick={()=>handleItem('weddingparty')} to='/weddingparty'><List txt='Wedding & Party' /></Link>
+                         <Link onClick={()=>handleItem('toysentertainment')} to='/toysentertainment'><List txt='Toys & Entertainment' /></Link>
+                         <Link onClick={()=>handleItem('artcollectibles')} to='/artcollectibles'><List txt='Art & Collectibles' /></Link>
+                         <Link onClick={()=>handleItem('craftsupplies')} to='/craftsupplies'><List txt='Craft Supplies & Tools' /></Link>
                     </Flex>
                 </Container>
             </nav>

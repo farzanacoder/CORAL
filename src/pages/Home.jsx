@@ -6,11 +6,13 @@ import BrndBaner from '../layouts/BrndBaner'
 import NewsPart from '../layouts/NewsPart'
 import BestSeler from '../layouts/BestSeler'
 import Products from '../layouts/Products'
+import ProductPage from './ProductPage'
 
 const Home = () => {
   return (
     <>
     <Banner/>
+    <ProductPage/>
     <Brand/>
     <Item/>
     <Products/>

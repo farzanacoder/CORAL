@@ -5,6 +5,7 @@ import Image from '../../components/Image'
 import Logo from '../../src/assets/logo.png'
 import { IoPerson, IoSearchSharp } from 'react-icons/io5'
 import { FaShoppingBag } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
   return (
@@ -12,7 +13,7 @@ const Header = () => {
     <section>
      <Container className='px-3 lg:px-0 py-5 lg:py-8 border-b border-[#E3E3E3]'>
          <Flex className='justify-between items-center'>
-                <div ><div className='w-24 lg:w-full'><Image src={Logo}/></div></div>
+                <Link to='/' ><div className='w-24 lg:w-full'><Image src={Logo}/></div></Link>
                 <div ><IoSearchSharp className='text-2xl'/></div>
                 <Flex className=' gap-x-6 items-center'>
                     <Flex className='gap-x-3 items-center'>

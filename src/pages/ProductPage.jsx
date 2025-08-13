@@ -88,10 +88,10 @@ const ProductPage = () => {
                         product && 
                         <>
                         <ul className='flex flex-col gap-y-5'>
-                        <li className='list-none text-sm lg:text-base text-black font-normal font-sans leading-8'>Brand: yes</li>
-                        <li className='list-none text-sm lg:text-base text-black font-normal font-sans leading-8'>Model: 7736</li>
-                        <li className='list-none text-sm lg:text-base text-black font-normal font-sans leading-8'>Weight: 100 gm</li>
-                        <li className='list-none text-sm lg:text-base text-black font-normal font-sans leading-8'>Warranty: no</li>
+                        <li className='list-none text-sm lg:text-base text-black font-normal font-sans leading-8'>01</li>
+                        <li className='list-none text-sm lg:text-base text-black font-normal font-sans leading-8'>eretry</li>
+                        <li className='list-none text-sm lg:text-base text-black font-normal font-sans leading-8'>gthyui</li>
+                        <li className='list-none text-sm lg:text-base text-black font-normal font-sans leading-8'>tguti</li>
                         </ul>
                         </>
                     }
@@ -107,13 +107,12 @@ const ProductPage = () => {
                 product2 && 
                 <>
                 <ul className='flex flex-col gap-y-5'>
-                        <li className='list-none text-sm lg:text-base text-black font-normal font-sans leading-8'>ShippingInformation: hmmm</li>
-                        <li className='list-none text-sm lg:text-base text-black font-normal font-sans leading-8'>ReturnPolicy: hello</li>
+                        <li className='list-none text-sm lg:text-base text-black font-normal font-sans leading-8'>ertxcvbsdfgh</li>
+                        <li className='list-none text-sm lg:text-base text-black font-normal font-sans leading-8'>ertyu</li>
                         </ul>
                 </>
              }
             </div>
-            <p className='w-full lg:w-[49%] text-sm lg:text-base text-black font-normal font-sans leading-8 pt-7 pb-15 lg:pb-[122px]'>hello</p>
             <Flex className='gap-x-15 pb-10'>
                 <div >
                     <h5  className='text-xl text-black font-normal font-sans leading-7'>Description</h5>

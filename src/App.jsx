@@ -15,11 +15,13 @@ import WeddingParty from './pages/WeddingParty';
 import ToysEntertainment from './pages/ToysEntertainment';
 import ArtCollectibles from './pages/ArtCollectibles';
 import CraftSupplies from './pages/CraftSupplies';
+import ProductPage from './pages/ProductPage';
 
 const router = createBrowserRouter( createRoutesFromElements(
    <>
     <Route path="/" element={<RootLayouts />} >
     <Route path="/" element={<Home />} ></Route>
+    <Route path="/productPage" element={<ProductPage />} ></Route>
     <Route path="/jewelryaccessories" element={<JewelryAccessories />} ></Route>
     <Route path="/clothingshoes" element={<ClothingShoes />} ></Route>
     <Route path="/homeliving" element={<HomeLiving />} ></Route>

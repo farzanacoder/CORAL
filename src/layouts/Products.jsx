@@ -1,11 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Container from "../../components/Container";
 import Flex from "../../components/Flex";
 import Heading from "../../components/Heading";
 import { MdFilterListAlt } from "react-icons/md";
 import Paginate from "../../components/Paginate";
+import axios from "axios";
 
 const Products = () => {
+    useEffect(()=>{
+        async function allData(){
+            let data = await axios.get('https://dummyjson.com/products')
+
+        }
+
+        allData()
+
+    },[])
+
+
   return (
     <section className="py-10 lg:py-15">
       <Container>

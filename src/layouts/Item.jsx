@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "../../components/Image";
 import Crd_1 from "../../src/assets/card.png";
-import Crd from "../../src/assets/18.png";
+import Crd from "../../src/assets/18.jpg";
 import Crd_2 from "../../src/assets/card_1.png";
 import Crd_3 from "../../src/assets/card_2.png";
 import Crd_4 from "../../src/assets/card_3.png";
@@ -14,7 +14,7 @@ const Item = () => {
       <Container>
         <Flex className="gap-x-6 flex-col lg:flex-row gap-y-6 lg:gap-y-0">
           <div className="lg:w-1/2 w-full">
-            <Image src={Crd} />
+          <div className=" h-[510px] w-[530px]"><Image className='w-full h-full' src={Crd} /></div>
           </div>
 
           <div className="lg:w-1/2 w-full">

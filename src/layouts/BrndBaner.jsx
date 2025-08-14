@@ -1,7 +1,7 @@
 import React from 'react'
 import Container from '../../components/Container'
 import Image from '../../components/Image'
-import Bnr1 from '../../src/assets/brand-banner.png'
+import Bnr1 from '../../src/assets/brand-banner.jpg'
 
 const BrndBaner = () => {
   return (

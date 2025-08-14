@@ -54,7 +54,8 @@ function Paginate({ itemsPerPage }) {
   return (
     <>
       <Items currentItems={currentItems} />
-      <ReactPaginate
+      <div className="flex lg:flex-row flex-col lg:justify-between justify-start items-center">
+        <ReactPaginate
         breakLabel="..."
         nextLabel=""
         onPageChange={handlePageClick}
@@ -66,6 +67,9 @@ function Paginate({ itemsPerPage }) {
         activeClassName="bg-blue-500 text-white px-3 py-1 rounded"
         pageClassName="px-3 py-1 border rounded"
       />
+  <p className='text-sm lg:text-base text-black font-sans leading-6'>Products from {itemOffset + 1} to {endOffset>items.length ? items.length : endOffset } of {items.length}</p>
+
+      </div>
     </>
   );
 }

@@ -21,7 +21,6 @@ const router = createBrowserRouter( createRoutesFromElements(
    <>
     <Route path="/" element={<RootLayouts />} >
     <Route path="/" element={<Home />} ></Route>
-    <Route path="/productPage" element={<ProductPage />} ></Route>
     <Route path="/jewelryaccessories" element={<JewelryAccessories />} ></Route>
     <Route path="/clothingshoes" element={<ClothingShoes />} ></Route>
     <Route path="/homeliving" element={<HomeLiving />} ></Route>
@@ -29,6 +28,7 @@ const router = createBrowserRouter( createRoutesFromElements(
     <Route path="/toysentertainment" element={<ToysEntertainment />} ></Route>
     <Route path="/artcollectibles" element={<ArtCollectibles />} ></Route>
     <Route path="/craftsupplies" element={<CraftSupplies />} ></Route>
+    <Route path="/productpage/:title" element={<ProductPage />} ></Route>
     </Route>
    </>
   )

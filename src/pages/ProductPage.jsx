@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { MdAdd } from 'react-icons/md'
 import { RxCross2 } from 'react-icons/rx'
 import { FaStar } from 'react-icons/fa'
@@ -6,8 +6,32 @@ import Container from '../../components/Container'
 import Flex from '../../components/Flex'
 import Image from '../../components/Image'
 import Bag from '../../src/assets/14.png'
+import { useParams } from 'react-router-dom'
+import axios from 'axios'
 
 const ProductPage = () => {
+    let products = useParams()
+      let [items, setItems] = useState([]);
+    
+
+    useEffect(()=>{
+        window.scrollTo({top:0})
+
+
+    }, [])
+
+     
+    
+    useEffect(() => {
+    async function fetchData() {
+      let data = await axios.get("https://dummyjson.com/products");
+      setItems(data.data.products);
+    }
+
+    fetchData();
+  }, []);
+
+
     let [product, setproduct]=useState(false)
     let [product2, setproduct2]=useState(false)
     let handleProduct=()=>{
@@ -20,9 +44,14 @@ const ProductPage = () => {
   return (
     <section className='py-15 lg:py-20 px-5'>
         <Container>
-                 <>
-                 <div className='w-full md:w-[300px] h-[230px] md:h-[300px] mt-10 lg:mt-20'><Image className='w-full h-full' src={Bag}/></div>
-                 <h1 className='text-2xl md:text-[28px] lg:text-[39px] text-black font-bold font-sanss pt-5'>Title</h1>
+                
+            <>
+                {
+                    items.map(item=>{
+                        if(item.title == products.title){
+                            return<>
+                 <div className='w-full md:w-[300px] h-[230px] md:h-[300px] mt-10 lg:mt-20'><Image className='w-full h-full' src={item.thumbnail}/></div>
+                 <h1 className='text-2xl md:text-[28px] lg:text-[39px] text-black font-bold font-sans pt-5'>{item.title}</h1>
            
             <Flex className='gap-x-6 items-center pt-4 pb-6'>
                 <ul className='flex gap-x-1'>
@@ -37,7 +66,7 @@ const ProductPage = () => {
 
             <Flex className=' gap-x-[22px] items-center pb-7 border-b-3 border-color5 w-full lg:w-[49%]'>
                 <h2 className= 'text-sm lg:text-base text-color5 font-normal font-sans'><del className='text-color5'>$88.00</del></h2>
-                <h2 className='text-base md:text-lg lg:text-xl text-black font-bold font-sans'>$5</h2>
+                <h2 className='text-base md:text-lg lg:text-xl text-black font-bold font-sans'>${item.price}</h2>
             </Flex>
 
             <Flex className='gap-x-13 items-center pt-14'>
@@ -141,12 +170,12 @@ const ProductPage = () => {
            
             
                 </>
+                        }
+                        
+                    })
+                }
                 
-            
-        
-
-            
-            
+             </>
             
         </Container>
     </section>

@@ -12,13 +12,22 @@ import {
   FaTwitter,
 } from "react-icons/fa";
 import FootList from "../../components/FootList";
+import { Link } from "react-router-dom";
+
+
 
 const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+
+
   return (
     <section>
       <header className="py-20">
         <Container>
-          <Flex className='flex-col lg:flex-row lg:gap-0 gap-5'>
+          <Flex className="flex-col lg:flex-row lg:gap-0 gap-5">
             <div className="lg:w-2/5 w-full pb-10 lg:pb-0">
               <Image src={Logo} />
               <p className="text-sm lg:text-base text-color4  font-sans py-10 w-full lg:w-[392px]">
@@ -74,11 +83,9 @@ const Footer = () => {
         </Container>
       </header>
 
-
-
       <footer className="py-10 text-white bg-[#1C232B]">
         <Container>
-          <Flex className=''>
+          <Flex className="">
             <div className="w-1/3 ">
               <p className="text-sm lg:text-base">© 2022 Coral , Inc.</p>
             </div>
@@ -86,9 +93,11 @@ const Footer = () => {
               <Image src={Foter} className="text-center h-[20px] lg:h-full" />
             </div>
             <div className="w-1/3 pl-6 lg:!pl-60">
-              <p className="flex items-center gap-2 lg:text-base text-sm">
-                Scroll to top <IoArrowUp />
-              </p>
+              <Link to="#" onClick={scrollToTop}>
+                <button className="flex items-center gap-2 lg:text-base text-sm fixed bottom-10 right-5 text-black cursor-pointer">
+                  Scroll to top <IoArrowUp />
+                </button>
+              </Link>
             </div>
           </Flex>
         </Container>

@@ -14,8 +14,8 @@ function Items({ currentItems }) {
             <div>
               <Card
                 title={item.title}
-                category="bag"
-                price={item.price}
+                category={item.brand}
+                price={`$ ${item.price}`}
                 src={item.thumbnail}
               />
             </div>
@@ -54,7 +54,7 @@ function Paginate({ itemsPerPage }) {
   return (
     <>
       <Items currentItems={currentItems} />
-      <div className="flex lg:flex-row flex-col lg:justify-between justify-start items-center">
+      <div className="flex lg:flex-row flex-col gap-6 lg:gap-0 lg:justify-between justify-start items-center">
         <ReactPaginate
         breakLabel="..."
         nextLabel=""

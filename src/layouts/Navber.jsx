@@ -8,6 +8,7 @@ import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { breadButton } from '../slices/breadCrumb'
 
+
 const Navber = () => {
     let dispatch = useDispatch()
      let handleItem=(item)=>{
@@ -40,13 +41,13 @@ const Navber = () => {
 
             <nav className='py-3 block lg:hidden '>
                 {
-                    show ? <FaChevronUp className='absolute top-[58px] left-1/2 -transform-y-[50%]' onClick={handleClick} /> :<FaChevronDown className='absolute top-[58px] left-1/2 -transform-y-[50%]' onClick={handleClick} />  
+                    show ? <FaChevronUp className='absolute top-[70px] left-1/2 -transform-y-[50%]' onClick={handleClick} /> :<FaChevronDown className='absolute top-[70px] left-1/2 -transform-y-[50%]' onClick={handleClick} />  
 
                 }
                 
                 {
                     show &&
-                    <div className='bg-white absolute top-[85px]  w-full py-5'>
+                    <div className='bg-color2 absolute z-10 top-[95px] w-full py-5'>
                         <Flex className='flex-col gap-y-5 items-center'>
                             <List txt='Jewelry & Accessories' />
                             <List txt='Clothing & Shoes' />

@@ -4,8 +4,21 @@ import Flex from './Flex'
 import { FaRegHeart } from 'react-icons/fa'
 import { FaBagShopping } from 'react-icons/fa6'
 import { Link } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { addtocard } from '../src/slices/addToCart'
 
 const Card = ({title, price, category, src }) => {
+  let dispatch=useDispatch()
+  let handleClick=()=>[
+    dispatch(addtocard({
+      title:title,
+      price:price,
+      image:src,
+      quantity:1
+    }))
+  ]
+
+
   return (
     <div className='lg:w-[250px] w-[330px] h-[460px] group relative border border-color3'>
         <span className='bg-black py-1 px-2 text-sm text-white font-semibold font-sans absolute top-5 left-0'>Sale</span>
@@ -15,10 +28,12 @@ const Card = ({title, price, category, src }) => {
             <span className='text-color5 text-base font-normal font-sans'>{category}</span>
             <span className='text-black text-base font-semibold font-sans '>{price}</span>
         </Flex>
+
           <div className='cursor-pointer text-white absolute left-0 bottom-0 bg-black w-full h-[55px] flex justify-between items-center px-5 opacity-0 group-hover:opacity-95 group-hover:bottom-[116px] duration-500'>
             <FaRegHeart/> 
-            <span className='flex gap-x-3 items-center'><FaBagShopping/> <span className='text-sm font-semibold font-san'>Shop Now</span></span>
+                        <span onClick={handleClick} className='flex gap-x-3 items-center'><FaBagShopping className='text-white'/> <span className='text-white text-sm font-semibold font-sans'>Shop Now</span></span>
         </div>
+        
     </div>
   )
 }

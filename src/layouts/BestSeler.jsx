@@ -52,7 +52,7 @@ const BestSeler = () => {
       <Container>
         <Heading className="text-center pb-9 text-black" txt="Best sellers" />
         <Flex className="justify-between flex-col lg:flex-row gap-y-4 md:gap-y-0 pb-10">
-          <div className="flex gap-x-10">
+          <div className="flex gap-x-7 lg:gap-x-10">
             <p className="text-color1 hover:text-color1 duration-500 cursor-pointer text-xs md:text-sm lg:text-base font-sans font-semibold">
               All products
             </p>
@@ -66,35 +66,29 @@ const BestSeler = () => {
               Jacket
             </p>
           </div>
+
           <div>
-            <span className=" inline-flex items-center gap-x-2 bg-black py-1 px-3 text-white text-xs md:text-sm font-sanS font-semibold">
+            <span className=" inline-flex items-center gap-x-2 bg-black py-1 px-3 text-white text-xs md:text-sm font-sans font-semibold">
               <MdFilterListAlt />
               <span>Show All</span>
             </span>
           </div>
+
         </Flex>
 
-        <div className="px-4">
           <Slider {...settings}>
-            {items.map((item) => (
-              <div key={item.id} className="px-2">
+            {
+            items.map((item) => (
                 <Card
                   title={item.title}
-                  category="bag"
+                  category={item.category}
                   price={`$ ${item.price}`}
                   src={item.thumbnail}
                 />
-              </div>
-            ))}
+            ))
+            }
           </Slider>
-        </div>
 
-        {/* <Flex className='gap-6 flex-wrap justify-center'>
-                    <Card title='Nike Sports Futura Luxe' category='bag' price='$ 12.99' src={Bagimg}/>
-                    <Card title='Nike Sports Futura Luxe' category='bag' price='$ 12.99' src={Bagimg}/>
-                    <Card title='Nike Sports Futura Luxe' category='bag' price='$ 12.99' src={Bagimg}/>
-                    <Card title='Nike Sports Futura Luxe' category='bag' price='$ 12.99' src={Bagimg}/>
-                </Flex> */}
       </Container>
     </section>
   );

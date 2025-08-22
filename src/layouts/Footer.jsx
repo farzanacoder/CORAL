@@ -43,7 +43,7 @@ const Footer = () => {
               </Flex>
             </div>
 
-            <div className="w-1/5">
+            <div className="lg:w-1/5 w-full">
               <h3 className="text-base text-black font-semibold font-sans pb-6">
                 CATALOG
               </h3>
@@ -55,7 +55,7 @@ const Footer = () => {
                 <FootList txt="jacket" />
               </Flex>
             </div>
-            <div className="w-1/5">
+            <div className="lg:w-1/5 w-full">
               <h3 className="text-base text-black font-semibold font-sans pb-6">
                 ABOUT US
               </h3>
@@ -67,7 +67,7 @@ const Footer = () => {
                 <FootList txt="Terms & Conditions" />
               </Flex>
             </div>
-            <div className="w-1/5">
+            <div className="lg:w-1/5 w-full">
               <h3 className="text-base text-black font-semibold font-sans pb-6">
                 CUSTOMER SERVICES
               </h3>
@@ -85,16 +85,18 @@ const Footer = () => {
 
       <footer className="py-10 text-white bg-[#1C232B]">
         <Container>
-          <Flex className="">
+          <Flex className="flex-col lg:flex-row lg:gap-0 gap-5">
             <div className="w-1/3 ">
-              <p className="text-sm lg:text-base">© 2022 Coral , Inc.</p>
+              <p className="text-sm lg:text-base">© 2022 Coral , Inc. </p>
             </div>
-            <div className="w-1/3 ">
+
+            <div className="lg:w-1/3 w-full">
               <Image src={Foter} className="text-center h-[20px] lg:h-full" />
             </div>
-            <div className="w-1/3 pl-6 lg:!pl-60">
+
+            <div className="w-1/3 lg:!pl-60">
               <Link to="#" onClick={scrollToTop}>
-                <button className="flex items-center gap-2 lg:text-base text-sm fixed bottom-10 right-5 text-black cursor-pointer">
+                <button className="flex items-center justify-center rounded-full gap-2 shadow-2xl w-[150px] h-[40px] font-bold bg-white text-base fixed bottom-10 right-5 text-black cursor-pointer">
                   Scroll to top <IoArrowUp />
                 </button>
               </Link>

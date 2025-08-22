@@ -24,7 +24,7 @@ const NewsPart = () => {
           <Image className='w-[200px] h-[200px]' src={Inst4} />
           <Image src={Inst5} />
          </Flex>
-        <Heading className="text-center" txt="Or subscribe to the newsletter" />
+        <Heading className="text-center pb-10" txt="Or subscribe to the newsletter" />
 
           <div className='flex gap-x-10 justify-center'>
                 <input className='w-1/3 border-b border-color5 py-3 px-3' type="email" placeholder='Email Address...'/> 

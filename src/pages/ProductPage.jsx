@@ -49,6 +49,7 @@ const ProductPage = () => {
                 {
                     items.map(item=>{
                         if(item.title == products.title){
+
                             return<>
                  <div className='w-full md:w-[300px] h-[230px] md:h-[300px] mt-10 lg:mt-20'><Image className='w-full h-full' src={item.thumbnail}/></div>
                  <h1 className='text-2xl md:text-[28px] lg:text-[39px] text-black font-bold font-sans pt-5'>{item.title}</h1>
@@ -65,7 +66,7 @@ const ProductPage = () => {
             </Flex>
 
             <Flex className=' gap-x-[22px] items-center pb-7 border-b-3 border-color5 w-full lg:w-[49%]'>
-                <h2 className= 'text-sm lg:text-base text-color5 font-normal font-sans'><del className='text-color5'>$88.00</del></h2>
+                <h2 className= 'text-sm lg:text-base text-color5 font-normal font-sans'><del className='text-color5'>${item.discountPercentage}</del></h2>
                 <h2 className='text-base md:text-lg lg:text-xl text-black font-bold font-sans'>${item.price}</h2>
             </Flex>
 
@@ -104,7 +105,7 @@ const ProductPage = () => {
 
             <Flex className='gap-x-7 items-center pt-14 pb-7 border-b-3 border-color5 w-full lg:w-[49%]'>
                 <h4 className='text-sm lg:text-base text-black font-bold font-sans'>STATUS:</h4>
-                <p className='text-base text-color5 font-sans'>In Stock</p>
+                <p className='text-base text-color5 font-sans'>{item.availabilityStatus}</p>
                 
             </Flex>
             
@@ -117,10 +118,9 @@ const ProductPage = () => {
                         product && 
                         <>
                         <ul className='flex flex-col gap-y-5'>
-                        <li className='list-none text-sm lg:text-base text-black font-normal font-sans leading-8'>01</li>
-                        <li className='list-none text-sm lg:text-base text-black font-normal font-sans leading-8'>eretry</li>
-                        <li className='list-none text-sm lg:text-base text-black font-normal font-sans leading-8'>gthyui</li>
-                        <li className='list-none text-sm lg:text-base text-black font-normal font-sans leading-8'>tguti</li>
+                        <li className='list-none text-sm lg:text-base text-black font-normal font-sans leading-8'>{item.dimensions.width}</li>
+                        <li className='list-none text-sm lg:text-base text-black font-normal font-sans leading-8'>{item.dimensions.height}</li>
+                        <li className='list-none text-sm lg:text-base text-black font-normal font-sans leading-8'>{item.dimensions.depth}</li>
                         </ul>
                         </>
                     }
@@ -142,18 +142,26 @@ const ProductPage = () => {
                 </>
              }
             </div>
-            <Flex className='gap-x-15 pb-10'>
+            <Flex className='flex-col gap-5 pb-10'>
                 <div >
-                    <h5  className='text-xl text-black font-normal font-sans leading-7'>Description</h5>
+                    <h5  className='text-xl text-black font-normal font-sans pt-5'>{item.description}</h5>
                     
                 </div>
-                <h5  className='text-xl text-sblack font-bold font-sans leading-7'>Reviews (1)</h5>
+                <h5  className='text-xl text-black font-bold font-sans leading-7'>Reviews (1)</h5>
             </Flex>
-            <p className='text-sm text-black font-normal font-sans leading-7 pb-4 border-b-2 border-color5'>1 review for Product</p>
+
+
+            
+            <ul className='text-sm text-black font-normal font-sans leading-7 pb-4 border-b-2 border-color5'>
+                <li>{item.reviews[0].rating}</li>
+                <li>{item.reviews[0].comment}</li>
+                <li>{item.reviews[0].date}</li>
+                <li>{item.reviews[0].reviewerName}</li>
+                <li>{item.reviews[0].reviewerEmail}</li>
+            </ul>
+            
             <Flex className='flex-col lg:flex-row gap-y-10 lg:gap-y-0 lg:justify-between lg:items-center pt-4 '>
                 <div className='flex items-center gap-x-9'>
-                   
-               
                     <ul className='flex gap-x-[2px] '>
                     <li className='text-sm text-[#FFD881]'><FaStar /></li>
                     <li className='text-sm text-[#FFD881]'><FaStar /></li>
@@ -164,7 +172,7 @@ const ProductPage = () => {
                 
                 </div>
                 <div>
-                    <p className='text-base text-black font-normal font-sans'>6 months ago</p>
+                    <p className='text-base text-black font-normal font-sans'>{item.warrantyInformation}</p>
                 </div>
             </Flex>
            

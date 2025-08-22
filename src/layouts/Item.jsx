@@ -14,7 +14,7 @@ const Item = () => {
       <Container>
         <Flex className="gap-x-6 flex-col lg:flex-row gap-y-6 lg:gap-y-0">
           <div className="lg:w-1/2 w-full">
-          <div className=" h-[510px] w-[530px]"><Image className='w-full h-full' src={Crd} /></div>
+          <div className=" lg:h-[510px] h-[250px] lg:w-[530px] w-full"><Image className='w-full h-full' src={Crd} /></div>
           </div>
 
           <div className="lg:w-1/2 w-full">

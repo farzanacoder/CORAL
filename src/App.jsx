@@ -16,6 +16,7 @@ import ToysEntertainment from './pages/ToysEntertainment';
 import ArtCollectibles from './pages/ArtCollectibles';
 import CraftSupplies from './pages/CraftSupplies';
 import ProductPage from './pages/ProductPage';
+import CartPage from './pages/CartPage';
 
 const router = createBrowserRouter( createRoutesFromElements(
    <>
@@ -29,6 +30,7 @@ const router = createBrowserRouter( createRoutesFromElements(
     <Route path="/artcollectibles" element={<ArtCollectibles />} ></Route>
     <Route path="/craftsupplies" element={<CraftSupplies />} ></Route>
     <Route path="/productpage/:title" element={<ProductPage />} ></Route>
+    <Route path="/cartpage" element={<CartPage />} ></Route>
     </Route>
    </>
   )

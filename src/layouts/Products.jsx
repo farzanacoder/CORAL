@@ -15,7 +15,7 @@ const Products = () => {
           txt="Or subscribe to the newsletter"
         />
         <Flex className="justify-between flex-col lg:flex-row gap-y-4 md:gap-y-0 pb-10">
-          <div className="flex gap-x-10">
+          <div className="flex gap-x-7 lg:gap-x-10">
             <p className="text-color1 hover:text-color1 duration-500 cursor-pointer text-xs md:text-sm lg:text-base font-sans font-semibold">
               All products
             </p>
